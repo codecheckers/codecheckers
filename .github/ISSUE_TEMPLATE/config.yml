@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Discussion Forum
+    url: https://github.com/codecheckers/discussion/issues
+    about: Please ask and answer general discussion questions here.
+  - name: Contact
+    url: https://codecheck.org.uk/team/
+    about: Get in touch with the CODECHECK team
