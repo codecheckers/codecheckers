@@ -1,8 +1,12 @@
 # Codecheckers Team
 
-This repo collects all information about people conducting codechecks.
+This repo collects all information about people conducting CODECHECKs as part of the [CODECHECK community](https://codecheck.org.uk/guide/community-process).
 
-If you want to [get involved](https://codecheck.org.uk/get-involved), please open an issue with the following information:
+## Find a codechecker
+
+You can take a look at the codecheckers table, [`codecheckers.csv`](codecheckers.csv) to find a suitable codechecker.
+Please check the codechecker is currently not busy with too many CODECHECKs already (TBD).
+
 ## Sign up
 
 If you want to [get involved](https://codecheck.org.uk/get-involved) as a codechecker, we need to run through the following steps:
