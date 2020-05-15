@@ -18,3 +18,19 @@ assignees: nuest
   - ... <!-- e.g. R (intermediate), nomic data analysis with MatLab, spatial data analysis with Python (basic),  -->
 
 <!-- Your domains and programming languages are mostly as a rough guide, because the instructions provided by authors should allow _anyone_ to codecheck a workflow! However, we must acknowledge that a CODECHECK can be conducted more efficiently if there is some familiarity with the used tools. -->
+
+------
+
+<!-- Extra information, completely optional, but interesting for us to know: -->
+
+How did you hear about CODECHECK?
+
+...
+
+What is your motivation to contribute to CODECHECK? E.g., improving coding skills, giving back to community, supporting reproducible research/open science, etc.
+
+...
+
+How much time would you be able to spend on codechecking (e.g., compared to time spend reviewing papers)?
+
+...
