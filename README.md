@@ -10,7 +10,7 @@ If you have a good candidate, please check the codechecker is currently not busy
 
 Alternatively, you can @-mention the codecheckers team with [`@codecheckers/codecheckers`](https://github.com/orgs/codecheckers/teams/codecheckers) in the issue for managing the codecheck and ask around for interested codecheckers by adding `@codecheckers/codecheckers` to an issue comment.
 
-Finally, you can ask the author for recommendations, start a call on Twitter, et cetera.
+Finally, you can ask the author for recommendations, start an open call for codecheckers on Twitter, et cetera.
 
 ## Sign up
 
