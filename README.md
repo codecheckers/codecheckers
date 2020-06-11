@@ -17,10 +17,10 @@ Finally, you can ask the author for recommendations, start an open call for code
 If you want to [get involved](https://codecheck.org.uk/get-involved) as a codechecker, we need to run through the following steps:
 
 1. Codechecker (you!) opens an issue **[using this link](https://github.com/codecheckers/codecheckers/issues/new?assignees=nuest&labels=registration&template=codechecker-registration.md&title=Register+as+codechecker)** (with an issue template)
-2. Community manager welcomes the new codechecker and makes sure all required information is there.
-3. Community manager adds the new codechecker to the [Codecheckers Team](https://github.com/orgs/codecheckers/teams/codecheckers) (Note: the team page is not public)
-4. Communtiy manager saves information in the "database" (close the issue with the commit)
-5. Close the sign-up issue.
+2. Community manager makes sure all required information is there
+3. Community manager invites the new codechecker to the [Codecheckers Team](https://github.com/orgs/codecheckers/teams/codecheckers) (Note: the team page is not public)
+4. Communtiy manager welcomes the new codechecker
+5. Communtiy manager saves information in the "database" and closes the issue with the commit
 
 ------
 
