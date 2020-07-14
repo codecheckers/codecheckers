@@ -7,7 +7,7 @@ assignees: nuest
 
 ---
 
-<!-- Thank you for becoming a codechecker! These HTML commments will not render in the issue, but you can delete them once you've read them if you prefer!
+<!-- Thank you for becoming a codechecker! These HTML comments will not render in the issue, but you can delete them once you've read them if you prefer!
 
 Here is some information on the data requested below:
 
