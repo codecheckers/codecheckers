@@ -1,8 +1,6 @@
 # Message snippets regularly reused, because we don't have a bot
 
-```
-
-
+```txt
 Thanks for your interest in becoming a codechecker! :heart:
 
 I invited you to [the team](https://github.com/orgs/codecheckers/teams/codecheckers) and added you to [the list](https://github.com/codecheckers/codecheckers/blob/master/codecheckers.csv). Welcome!
