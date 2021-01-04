@@ -6,6 +6,7 @@ This repo collects all information about people conducting CODECHECKs as part of
 
 You can take a look at the codecheckers table, [`codecheckers.csv`](codecheckers.csv) to find a suitable codechecker.
 GitHub even provides a nice [search function](https://help.github.com/en/github/managing-files-in-a-repository/rendering-csv-and-tsv-data) for the file.
+Consider skills earlier in the list to be more advanced, later ones to be less strong.
 If you have a good candidate, please check the codechecker is currently not busy with too many CODECHECKs already (see assigned issues in the [CODECHECK register](https://github.com/codecheckers/register/)).
 
 Alternatively, you can @-mention the codecheckers team with [`@codecheckers/codecheckers`](https://github.com/orgs/codecheckers/teams/codecheckers) in the issue for managing the codecheck and ask around for interested codecheckers by adding `@codecheckers/codecheckers` to an issue comment.
