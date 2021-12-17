@@ -1,6 +1,6 @@
 # Codecheckers Team
 
-This repo collects all information about people conducting CODECHECKs as part of the [CODECHECK community](https://codecheck.org.uk/guide/community-process).
+This repo collects all information about people conducting CODECHECKs as part of the [CODECHECK community](https://codecheck.org.uk/guide/community-workflow).
 
 ## Find a codechecker
 
