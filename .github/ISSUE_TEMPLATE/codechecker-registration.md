@@ -36,12 +36,16 @@ name,@GitHub-handle,ORCID ID (not url),contact (or "see ORCID page" - ONLY IF yo
 
 How did you hear about CODECHECK?
 
-...
+_I ..._
 
 What is your motivation to contribute to CODECHECK? E.g., improving coding skills, giving back to community, supporting reproducible research/open science, etc.
 
-...
+_My motivation is ..._
 
 How much time would you be able to spend on codechecking (e.g., compared to time spend reviewing papers)?
 
-...
+_About/at least/not more than ..._
+
+Are you an early career researcher (ECR)? (someone within 8 years of the award of the PhD; not yet transitioned to independent researcher)
+
+_Yes/No_
