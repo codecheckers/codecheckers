@@ -1,7 +1,7 @@
 blank_issues_enabled: false
 contact_links:
   - name: Discussion Forum
-    url: https://github.com/codecheckers/discussion/issues
+    url: https://github.com/orgs/codecheckers/discussions
     about: Please ask and answer general discussion questions here.
   - name: Contact
     url: https://codecheck.org.uk/team/
