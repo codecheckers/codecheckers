@@ -13,6 +13,16 @@ Alternatively, you can @-mention the codecheckers team with [`@codecheckers/code
 
 Finally, you can ask the author for recommendations, start an open call for codecheckers on Twitter, et cetera.
 
+## Institutional codecheckers
+
+Not everybody in the [Codecheckers Team](https://github.com/orgs/codecheckers/teams/codecheckers) is a volunteer.
+Some people conduct CODECHECKs as part of their job, e.g., as research software engineers or as part of an institutional reproducibility programme, and they are members of the organisation so they can take on and submit checks for their institution.
+They are recorded in [`institutional-codecheckers.csv`](institutional-codecheckers.csv) with their GitHub handle and the institution they codecheck for - the file exists so that org membership without a corresponding entry in `codecheckers.csv` is documented rather than confusing.
+
+Institutional codecheckers do not go through the volunteer sign-up below; they are usually onboarded as part of setting up the collaboration with their institution.
+Someone can be in both lists, e.g., when they registered as a volunteer and later also codecheck as part of their role.
+Please do not contact institutional codecheckers with requests for volunteer checks - they pick up the work assigned within their institution.
+
 ## Sign up
 
 If you want to [get involved](https://codecheck.org.uk/get-involved) as a codechecker, we need to run through the following steps:
