@@ -8,8 +8,14 @@ Everything below was verified against the live API in the `codecheckers/codechec
 
 **Supervision rule:** every read/validation step may run unattended. Every step that writes — team
 invitation, issue comment, commit/push, issue close — is proposed to the human first and only executed
-after explicit approval. The welcome message in particular is always shown as a draft with an offer to
-amend (see [Step 5](#step-5-draft-and-approve-the-reply)).
+after explicit approval.
+
+> **Strict rule, no exceptions: never post a comment or any other message other people will read until
+> the full draft has been shown to the community manager and approved.** This holds even when the
+> instruction is "handle the registration" or "run the sequence", and even when a near-identical
+> message was approved minutes earlier — approval of one message is never approval of the next.
+> Render the complete text, stop, and wait. Batch the drafts if several are due, and call out anything
+> in them that involved a judgement call. The other steps of the workflow do not need this pause.
 
 ## 0. Preconditions
 

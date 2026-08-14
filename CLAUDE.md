@@ -28,6 +28,8 @@ When auditing team membership against the lists, check **both** files before rep
 
 New codecheckers open an issue via `.github/ISSUE_TEMPLATE/codechecker-registration.md`, which asks them to paste their row as CSV. The community manager (`nuest`) then: verifies the data, invites the person to the GitHub `codecheckers` team, replies with the welcome snippet from `not-a-bot.md`, and appends the row.
 
+**Never post a comment or any other message others will read until the full draft has been shown to the user and approved** — no exceptions, not even when told to "handle it" or "run the sequence", and not because a near-identical message was approved earlier. Invitations, CSV edits and commits do not need that pause; text other people will see always does.
+
 **When asked to process a registration issue, follow [`registration-runbook.md`](registration-runbook.md)** — it has the exact `gh api` calls, the ORCID email verification, the validation checks, the message templates with their observed variants, and the points at which to stop and ask the human.
 
 Commits that add a codechecker follow the established message form, which closes the issue:
