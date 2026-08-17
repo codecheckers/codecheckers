@@ -70,7 +70,7 @@ both live in comments and would otherwise be mistaken for data.
 Target schema (see [CLAUDE.md](CLAUDE.md) for the column conventions):
 
 ```
-name,handle,ORCID,contact,fields,languages
+name,handle,ORCID,contact,fields,languages,ecr_until,ecr_checked
 ```
 
 Normalisation to apply before validating — all of these occur regularly in real submissions:
@@ -81,7 +81,7 @@ Normalisation to apply before validating — all of these occur regularly in rea
 | `@cherylisabella ` / `valerieorozco988` | trim, ensure exactly one leading `@` |
 | `"…, HPC, "` (trailing comma/space inside a quoted list) | trim the list items |
 | `https://orcid.org/0000-…` | reduce to the bare ID |
-| unquoted multi-value `fields`/`languages` | re-quote so the row still has 6 columns |
+| unquoted multi-value `fields`/`languages` | re-quote so the row still has 8 columns |
 | `R(expert),Python(intermediate)` | acceptable as-is; do not invent spacing changes |
 
 Never paste the row verbatim; always re-emit it through a CSV writer so quoting is correct.
@@ -90,8 +90,10 @@ Never paste the row verbatim; always re-emit it through a CSV writer so quoting 
 
 Run all checks, then present a single pass/fail summary to the human.
 
-**a) Six columns present.** The most common defect is a missing `contact` column (issue #77 submitted
+**a) Eight columns present.** The most common defect is a missing `contact` column (issue #77 submitted
 5 fields), or the untouched template line still containing `name,@GitHub-handle,…` (issue #72).
+Registrations filed before the ECR columns were introduced have six — fill `ecr_until`/`ecr_checked`
+per (g) rather than rejecting the row.
 
 **b) Handle resolves and matches the issue author.**
 
@@ -142,10 +144,19 @@ grep -in '<login>' codecheckers.csv                                # already lis
 
 Someone can be in the team but not the list (issue #68) — that changes the wording of the reply.
 
-**g) Optional questionnaire.** The ECR / motivation / time answers are not stored in the CSV, but they
-inform the reply: registrants have twice been gently corrected on the ECR question ("Actually, you are
-an early career researcher as a graduate student", #61; "as you are still a student … you are most
-definitely an ECR", #74). Surface these answers to the human.
+**g) `ecr_until` / `ecr_checked`.** Values are `YYYY-MM` (the month eight years after the PhD was
+awarded), `open` (no PhD yet, so no end date), `expired` (has a PhD, no date available) or `NA`
+(unknown — **never** a synonym for "no"). `ecr_checked` is `<YYYY-MM>;<source URL>`, the URL being the
+person's ORCID profile when the date came from there, otherwise the registration issue; `NA` if never
+established. Verify a submitted date against ORCID (`/v3.0/<ORCID>/record`, look for a PhD/doctorate
+entry under `educations` or `qualifications`) and prefer the ORCID-derived value, citing the profile.
+Two registrants have understated their status ("Actually, you are an early career researcher as a
+graduate student", #61; "as you are still a student … you are most definitely an ECR", #74), so treat a
+self-reported value as a claim to check, and mention career breaks — they extend the window.
+
+**h) Optional questionnaire.** The motivation and time answers are not stored, but they inform the
+reply: several people say they are not interested in reviewing papers, in which case drop the "suggest a
+CODECHECK with your next review" sentence. Surface these answers to the human.
 
 ## 4. If information is missing
 

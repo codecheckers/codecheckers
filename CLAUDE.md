@@ -8,7 +8,7 @@ There is no code, build, or test suite here. This is the "database" of the [CODE
 
 ## The data files
 
-`codecheckers.csv` — the volunteer list, columns: `name,handle,ORCID,contact,fields,languages`
+`codecheckers.csv` — the volunteer list, columns: `name,handle,ORCID,contact,fields,languages,ecr_until,ecr_checked`
 
 - Rows are append-only in registration order; do not sort or reorder.
 - `handle` is the GitHub handle with a leading `@` (a few historic rows are missing it — leave them alone unless fixing that row).

@@ -13,6 +13,24 @@ Alternatively, you can @-mention the codecheckers team with [`@codecheckers/code
 
 Finally, you can ask the author for recommendations, start an open call for codecheckers on Twitter, et cetera.
 
+## Early career researcher (ECR) status
+
+The last two columns of [`codecheckers.csv`](codecheckers.csv) record whether someone is an early career researcher, i.e., within eight years of the award of their PhD and not yet transitioned to an independent researcher.
+We track it because some programmes and funders ask us to involve ECRs, and because it is a moving target: nobody's ECR status is permanent, so a plain yes/no goes stale silently.
+
+Instead of a boolean, we record **when the status ends** and **when we last established it**:
+
+| Column | Meaning |
+| --- | --- |
+| `ecr_until` | `YYYY-MM` - the month the eight-year window closes. Somebody is currently an ECR if this is in the future. |
+| | `open` - is an ECR, but no end date can be determined yet, e.g., because the PhD is still ongoing. |
+| | `expired` - is not an ECR, but no date is available to say since when. |
+| | `NA` - unknown, we have never established it. **`NA` never means "no".** |
+| `ecr_checked` | `<YYYY-MM>;<source URL>` - when the value was last established and what it is based on, either the person's ORCID profile (which carries the PhD date) or their registration issue (where they told us themselves). `NA` if never established. |
+
+So "who is currently an ECR?" is `ecr_until` being `open` or a month in the future, and "whose entry needs a fresh look?" is `ecr_until` being `NA`, or an `ecr_checked` date that is more than a year old.
+Note that the eight-year window is a guideline, not a rule: career breaks such as parental leave normally extend it, so a date in `ecr_until` may be adjusted by hand - please just tell us.
+
 ## Institutional codecheckers
 
 Not everybody in the [Codecheckers Team](https://github.com/orgs/codecheckers/teams/codecheckers) is a volunteer.

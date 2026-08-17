@@ -110,7 +110,7 @@ Where someone has left the collaboration, decide whether to drop the row or move
 
 Cheap to check, easy to let rot:
 
-- six columns in every row of `codecheckers.csv`, two in `institutional-codecheckers.csv`;
+- eight columns in every row of `codecheckers.csv`, two in `institutional-codecheckers.csv`;
 - exactly one leading `@` on every handle, no stray whitespace, no `", "` between fields;
 - ORCID present, bare (no URL), and matching `\d{4}-\d{4}-\d{4}-\d{3}[\dX]`;
 - `fields` and `languages` non-empty;
