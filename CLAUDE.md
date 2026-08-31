@@ -17,9 +17,13 @@ There is no code, build, or test suite here. This is the "database" of the [CODE
 - `ecr_until` is `YYYY-MM` (eight years after the PhD), `open` (PhD under way), `expired` (has a PhD, no date available) or `NA`. **`NA` means unknown, never "no".** `ecr_checked` is `<YYYY-MM>;<source URL>` — the ORCID profile if the date came from there, otherwise the registration issue — or `NA`. See the README section for the rationale.
 - `fields` and `languages` are comma-separated lists inside one CSV field, so they must be double-quoted whenever they contain a comma. Per the README, entries within `languages` are ordered most-to-least proficient.
 
-`institutional-codecheckers.csv` — columns: `handle,institution`
+`institutional-codecheckers.csv` — columns: `name,handle,ORCID,institution`
 
-People who codecheck as part of their job rather than as volunteers. They are org/team members without a volunteer registration issue, and this file documents why. Same `@handle` convention; no ORCID or contact is collected, since the institution is the point of contact. Overlap with `codecheckers.csv` is allowed and expected (e.g. `@yiquintero` is in both). Do not onboard someone here via the volunteer registration workflow, and do not silently move a row between the two files — ask.
+People who codecheck as part of their job rather than as volunteers. They are org/team members without a volunteer registration issue, and this file documents why. Same `@handle` convention; no contact is collected, since the institution is the point of contact. The ORCID is recorded so a row can be matched to that person's certificates in the register, which identifies codecheckers by ORCID; `NA` where it is not known.
+
+`agile-codecheckers.csv` — columns: `name,handle,ORCID`
+
+Reviewers of the [Reproducible AGILE](https://github.com/reproducible-agile) initiative, who codecheck AGILE conference submissions rather than as volunteers. Same conventions as the institutional list, minus the institution; `handle` is `NA` where no GitHub account could be established. Overlap with the other two files is allowed and expected. Overlap with `codecheckers.csv` is allowed and expected (e.g. `@yiquintero` is in both). Do not onboard someone here via the volunteer registration workflow, and do not silently move a row between the two files — ask.
 
 [`annual-maintenance.md`](annual-maintenance.md) holds the yearly upkeep checklist (renamed handles, dead `see ORCID page` contacts, list/team reconciliation) with runnable scripts; follow it when asked to check or clean up the lists, and record each run in its table.
 

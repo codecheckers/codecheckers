@@ -35,11 +35,22 @@ Note that the eight-year window is a guideline, not a rule: career breaks such a
 
 Not everybody in the [Codecheckers Team](https://github.com/orgs/codecheckers/teams/codecheckers) is a volunteer.
 Some people conduct CODECHECKs as part of their job, e.g., as research software engineers or as part of an institutional reproducibility programme, and they are members of the organisation so they can take on and submit checks for their institution.
-They are recorded in [`institutional-codecheckers.csv`](institutional-codecheckers.csv) with their GitHub handle and the institution they codecheck for - the file exists so that org membership without a corresponding entry in `codecheckers.csv` is documented rather than confusing.
+They are recorded in [`institutional-codecheckers.csv`](institutional-codecheckers.csv) with their name, GitHub handle, ORCID and the institution they codecheck for - the file exists so that org membership without a corresponding entry in `codecheckers.csv` is documented rather than confusing.
+The ORCID is what connects a row to the person's checks in the [CODECHECK register](https://codecheck.org.uk/register/), which identifies codecheckers by ORCID, not by GitHub handle.
 
 Institutional codecheckers do not go through the volunteer sign-up below; they are usually onboarded as part of setting up the collaboration with their institution.
 Someone can be in both lists, e.g., when they registered as a volunteer and later also codecheck as part of their role.
 Please do not contact institutional codecheckers with requests for volunteer checks - they pick up the work assigned within their institution.
+
+## AGILE codecheckers
+
+The [Reproducible AGILE](https://reproducible-agile.github.io/) initiative runs the reproducibility reviews for the annual [AGILE conference](https://agile-online.org/).
+Its reviewers conduct CODECHECKs as part of that programme rather than as volunteers, so most of them never sign up via the process below.
+They are recorded in [`agile-codecheckers.csv`](agile-codecheckers.csv) with their name, GitHub handle and ORCID.
+
+As with the institutional list, overlap with `codecheckers.csv` is allowed and expected, and the ORCID is what links a row to that person's certificates in the register.
+Please do not contact AGILE codecheckers with requests for volunteer checks - they review the submissions assigned to them by the initiative.
+New reviewers are onboarded by the Reproducible AGILE team, see the [`reproducible-agile`](https://github.com/reproducible-agile) organisation.
 
 ## Sign up
 
