@@ -64,6 +64,10 @@ ask the person (see the *missing email* template in [`registration-runbook.md`](
 Note the ORCID API cannot distinguish "no email" from "email set to private" — either way there is
 nothing reachable for us.
 
+**Rows whose `contact` is already a URL or an obfuscated address are out of scope for this step.** That
+is a deliberate privacy choice; leave it alone. Only act if the URL itself is dead, and then replace it
+with another page that leads to the person rather than with a plain address (see issue #11).
+
 ## 3. Reconcile the lists with the GitHub teams
 
 ```bash
@@ -106,7 +110,39 @@ gh api --paginate orgs/codecheckers/teams/institutional-codecheckers/members --j
 Where someone has left the collaboration, decide whether to drop the row or move them to
 `codecheckers.csv` as a volunteer — ask them, do not assume.
 
-## 5. Row hygiene
+## 5. ECR status that has run out or was never established
+
+`ecr_until` is the whole point of storing a date instead of a boolean: the yearly pass is a comparison,
+not a round of asking. See the README for the four values.
+
+```bash
+python3 - <<'PY'
+import csv, datetime
+now = datetime.date.today().strftime('%Y-%m')
+for r in csv.DictReader(open('codecheckers.csv')):
+    u, c = r['ecr_until'].strip(), r['ecr_checked'].strip()
+    if u[:2] == '20' and u < now and (c[:7] < u):
+        print('CROSSED  ', r['handle'], u, '(checked', c[:7] + ')')
+    elif u == 'open':
+        print('open     ', r['handle'], '- re-ask if', c[:7], 'is over a year old')
+    elif u == 'NA':
+        print('unknown  ', r['handle'])
+PY
+```
+
+- **CROSSED** — the window closed since we last looked. Update `ecr_until` only if you learn a better
+  date; otherwise just refresh `ecr_checked`. The value stays as the date, which is what makes "no
+  longer an ECR, since when" answerable.
+- **open** — a PhD in progress. Once it is awarded, `open` becomes `YYYY-MM` (award month + 8 years).
+  ORCID is the place to check, and the person's CV page often says it too.
+- **unknown** — never established. `NA` must never be read as "no". Ask during the ping in step 7, or
+  derive it from ORCID: `GET /v3.0/<ORCID>/record`, look for a PhD/doctorate entry under `educations`
+  or `qualifications`. About half of the list has no such entry, which is not evidence of no PhD.
+
+Record what a value is based on in `ecr_checked` as `<YYYY-MM>;<URL>`, the URL being the ORCID profile
+when the date came from there, otherwise the registration issue.
+
+## 6. Row hygiene
 
 Cheap to check, easy to let rot:
 
@@ -117,13 +153,13 @@ Cheap to check, easy to let rot:
 - no duplicate handles or ORCIDs;
 - the ORCID's name still plausibly matches the `name` column (catches copy-paste of the wrong ID).
 
-## 6. Ping the codecheckers
+## 7. Ping the codecheckers
 
 Issue #29: contact everyone once a year — confirm their data is current, ask whether they are still
 available, and remind them of the register. This is also the moment to ask people whose contact or
 handle could not be repaired in steps 1–2.
 
-## 7. Availability
+## 8. Availability
 
 Cross-check the [register](https://github.com/codecheckers/register/) for who is currently assigned,
 so recommendations from `codecheckers.csv` do not go to people already busy with several checks.
