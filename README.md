@@ -31,6 +31,12 @@ Instead of a boolean, we record **when the status ends** and **when we last esta
 So "who is currently an ECR?" is `ecr_until` being `open` or a month in the future, and "whose entry needs a fresh look?" is `ecr_until` being `NA`, or an `ecr_checked` date that is more than a year old.
 Note that the eight-year window is a guideline, not a rule: career breaks such as parental leave normally extend it, so a date in `ecr_until` may be adjusted by hand - please just tell us.
 
+## Fediverse accounts
+
+All three lists have an optional `fediverse` column with the person's Mastodon or other fediverse account, written `@user@instance`, e.g. `@christina@fediscience.org`.
+When a CODECHECK certificate is announced on the fediverse, the people who worked on it are mentioned by this account (see [codecheckers/register#217](https://github.com/codecheckers/register/issues/217)).
+The column is empty unless the person told us their account; to add or change yours, open an issue or a pull request.
+
 ## Institutional codecheckers
 
 Not everybody in the [Codecheckers Team](https://github.com/orgs/codecheckers/teams/codecheckers) is a volunteer.

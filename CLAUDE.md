@@ -8,20 +8,21 @@ There is no code, build, or test suite here. This is the "database" of the [CODE
 
 ## The data files
 
-`codecheckers.csv` — the volunteer list, columns: `name,handle,ORCID,contact,fields,languages,ecr_until,ecr_checked`
+`codecheckers.csv` — the volunteer list, columns: `name,handle,ORCID,contact,fields,languages,ecr_until,ecr_checked,fediverse`
 
 - Rows are append-only in registration order; do not sort or reorder.
 - `handle` is the GitHub handle with a leading `@` (a few historic rows are missing it — leave them alone unless fixing that row).
 - `ORCID` is the bare ID, not a URL.
 - `contact` is an email address, a URL, or the literal string `see ORCID page` (only valid if that profile actually exposes a public email — see the second snippet in `not-a-bot.md` for the reply when it doesn't). **A URL or an obfuscated address is a deliberate privacy choice — never convert it to a plain address, and never quote an address in a public comment; link the page that carries it instead** (issue #11).
 - `ecr_until` is `YYYY-MM` (eight years after the PhD), `open` (PhD under way), `expired` (has a PhD, no date available) or `NA`. **`NA` means unknown, never "no".** `ecr_checked` is `<YYYY-MM>;<source URL>` — the ORCID profile if the date came from there, otherwise the registration issue — or `NA`. See the README section for the rationale.
+- `fediverse` is the person's Mastodon/fediverse account as `@user@instance`, or empty. It is used to @-mention the person when a certificate is announced (codecheckers/register#217), so only record an account the person gave us themselves.
 - `fields` and `languages` are comma-separated lists inside one CSV field, so they must be double-quoted whenever they contain a comma. Per the README, entries within `languages` are ordered most-to-least proficient.
 
-`institutional-codecheckers.csv` — columns: `name,handle,ORCID,institution`
+`institutional-codecheckers.csv` — columns: `name,handle,ORCID,institution,fediverse`
 
 People who codecheck as part of their job rather than as volunteers. They are org/team members without a volunteer registration issue, and this file documents why. Same `@handle` convention; no contact is collected, since the institution is the point of contact. The ORCID is recorded so a row can be matched to that person's certificates in the register, which identifies codecheckers by ORCID; `NA` where it is not known.
 
-`agile-codecheckers.csv` — columns: `name,handle,ORCID`
+`agile-codecheckers.csv` — columns: `name,handle,ORCID,fediverse`
 
 Reviewers of the [Reproducible AGILE](https://github.com/reproducible-agile) initiative, who codecheck AGILE conference submissions rather than as volunteers. Same conventions as the institutional list, minus the institution; `handle` is `NA` where no GitHub account could be established. Overlap with the other two files is allowed and expected. Overlap with `codecheckers.csv` is allowed and expected (e.g. `@yiquintero` is in both). Do not onboard someone here via the volunteer registration workflow, and do not silently move a row between the two files — ask.
 

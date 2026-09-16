@@ -16,12 +16,13 @@ Here is some information on the data requested below:
 - Fields/domains of expertise is a lower case list of stuff you have experience with, which may help us to increase the chance of you being familiar with a workflow/tool you shall check
 - Programming language(s) and experience levels, e.g., "R (intermediate)", "nomic data analysis with MatLab", "spatial data analysis with Python (basic)"; don't worry about experience level too much, anyone should be able to check any workflow given proper documentation; we acknowledge that a CODECHECK can be conducted more efficiently if there is some familiarity with the used tools
 - ecr_until records until when you are an early career researcher (ECR), i.e., within 8 years of the award of your PhD and not yet transitioned to an independent researcher. Please put the month 8 years after your PhD was awarded as YYYY-MM, e.g. "2029-04" if you got your PhD in April 2021. Write "open" if you do not have a PhD yet, "expired" if you have one but are not sure when the 8 years ran out, and "NA" if you'd rather not say. Career breaks such as parental leave extend the window - just say so below and we will adjust the date.
-- ecr_checked is where that information comes from, as "<current month>;<URL>". If the PhD date is on your ORCID profile, use that, e.g. "2026-08;https://orcid.org/0000-0001-0002-0003". Otherwise just write "NA" and we will fill in the link to this issue. -->
+- ecr_checked is where that information comes from, as "<current month>;<URL>". If the PhD date is on your ORCID profile, use that, e.g. "2026-08;https://orcid.org/0000-0001-0002-0003". Otherwise just write "NA" and we will fill in the link to this issue.
+- fediverse is optional: your Mastodon or other fediverse account as @user@instance, e.g. "@christina@fediscience.org". We use it to mention you when we announce a CODECHECK you worked on. Leave it empty if you prefer. -->
 
 <!-- EXAMPLE:
 
 ```
-Christina Codechecker,@christina_the_codechecker,0000-0001-0002-0003,see ORCID page,"neuroscience, models, HPC","R, Matlab",2029-04,2026-08;https://orcid.org/0000-0001-0002-0003
+Christina Codechecker,@christina_the_codechecker,0000-0001-0002-0003,see ORCID page,"neuroscience, models, HPC","R, Matlab",2029-04,2026-08;https://orcid.org/0000-0001-0002-0003,@christina@fediscience.org
 ```
 
 -->
@@ -29,7 +30,7 @@ Christina Codechecker,@christina_the_codechecker,0000-0001-0002-0003,see ORCID p
 Your data:
 
 ```csv
-name,@GitHub-handle,ORCID ID (not url),contact (or "see ORCID page" - ONLY IF your profile has a public email),"fields","languages",ecr_until (YYYY-MM, or open/expired/NA),ecr_checked (<current month>;<source URL>, or NA)
+name,@GitHub-handle,ORCID ID (not url),contact (or "see ORCID page" - ONLY IF your profile has a public email),"fields","languages",ecr_until (YYYY-MM, or open/expired/NA),ecr_checked (<current month>;<source URL>, or NA),fediverse (@user@instance, optional)
 ```
 
 <!-- Extra information, completely optional, but interesting for us to know. PLEASE DELETE IF YOU PREFER NOT TO ANSWER -->

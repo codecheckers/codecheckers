@@ -70,7 +70,7 @@ both live in comments and would otherwise be mistaken for data.
 Target schema (see [CLAUDE.md](CLAUDE.md) for the column conventions):
 
 ```
-name,handle,ORCID,contact,fields,languages,ecr_until,ecr_checked
+name,handle,ORCID,contact,fields,languages,ecr_until,ecr_checked,fediverse
 ```
 
 Normalisation to apply before validating — all of these occur regularly in real submissions:
@@ -81,7 +81,8 @@ Normalisation to apply before validating — all of these occur regularly in rea
 | `@cherylisabella ` / `valerieorozco988` | trim, ensure exactly one leading `@` |
 | `"…, HPC, "` (trailing comma/space inside a quoted list) | trim the list items |
 | `https://orcid.org/0000-…` | reduce to the bare ID |
-| unquoted multi-value `fields`/`languages` | re-quote so the row still has 8 columns |
+| unquoted multi-value `fields`/`languages` | re-quote so the row still has 9 columns |
+| `https://fediscience.org/@user` or `@user` alone in `fediverse` | rewrite as `@user@instance`; leave empty if the instance is unknown |
 | `R(expert),Python(intermediate)` | acceptable as-is; do not invent spacing changes |
 
 Never paste the row verbatim; always re-emit it through a CSV writer so quoting is correct.
@@ -90,10 +91,10 @@ Never paste the row verbatim; always re-emit it through a CSV writer so quoting 
 
 Run all checks, then present a single pass/fail summary to the human.
 
-**a) Eight columns present.** The most common defect is a missing `contact` column (issue #77 submitted
+**a) Nine columns present.** The most common defect is a missing `contact` column (issue #77 submitted
 5 fields), or the untouched template line still containing `name,@GitHub-handle,…` (issue #72).
 Registrations filed before the ECR columns were introduced have six — fill `ecr_until`/`ecr_checked`
-per (g) rather than rejecting the row.
+per (g) rather than rejecting the row. Registrations filed before the `fediverse` column have eight — leave `fediverse` empty.
 
 **b) Handle resolves and matches the issue author.**
 

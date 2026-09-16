@@ -146,7 +146,7 @@ when the date came from there, otherwise the registration issue.
 
 Cheap to check, easy to let rot:
 
-- eight columns in every row of `codecheckers.csv`, two in `institutional-codecheckers.csv`;
+- nine columns in every row of `codecheckers.csv`, five in `institutional-codecheckers.csv`, four in `agile-codecheckers.csv`;
 - exactly one leading `@` on every handle, no stray whitespace, no `", "` between fields;
 - ORCID present, bare (no URL), and matching `\d{4}-\d{4}-\d{4}-\d{3}[\dX]`;
 - `fields` and `languages` non-empty;
