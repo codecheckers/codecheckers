@@ -45,3 +45,13 @@ add @handle, closes #NN
 ```
 
 Take the row content from the issue but normalize it to the column conventions above rather than pasting verbatim — submissions frequently omit the `@`, include an ORCID URL, or leave quoting off multi-value fields.
+
+## Global rules
+
+<!-- Source: own rule, added 2026-10-23; see ~/.claude/CLAUDE.md, rule G0.2. -->
+
+This applies only if a user-level `~/.claude/CLAUDE.md` exists; otherwise
+ignore this section. That file holds rules for all projects, with IDs such as
+G1.1. Whenever one of them changes what you do, say so in your reply and name
+the rule, e.g. "I found X. I did not do Y but suggest Z, following global rule
+G1.1."

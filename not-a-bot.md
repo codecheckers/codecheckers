@@ -1,5 +1,13 @@
 # Message snippets regularly reused, because we don't have a bot
 
+> **Now we have one.** Since [codecheckers/chekhov#49](https://github.com/codecheckers/chekhov/issues/49),
+> `@chekhovbot` posts both snippets itself: its answer to a registration asks for an email when neither the
+> ORCID record nor `contact` gives one, and the nightly sweep posts the welcome - the first snippet below,
+> its second sentence saying what is now so - once the row is merged and the person is in the team. The
+> wording lives in chekhov's reply bodies; this file stays as its source and for a registration handled by
+> hand. Anything personal is the handling editor's own, separate comment. See
+> [`registration-runbook.md`](registration-runbook.md) for which steps the bot does.
+
 ```txt
 Thanks for your interest in becoming a codechecker! :heart:
 
