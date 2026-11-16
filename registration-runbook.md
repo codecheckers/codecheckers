@@ -25,7 +25,7 @@ reference for what it checks and as the procedure when a registration is handled
 
 | Step | With the bot |
 | --- | --- |
-| 1-3 pick up, extract, validate | answered by itself when a `registration` issue is opened; `@chekhovbot include check` looks again after an edit. It normalises the row, checks the handle against the author, the ORCID, the email behind `see ORCID page`, the ECR columns, and whether the person is listed or in a team already - warning, not refusing, for the institutional team or another list |
+| 1-3 pick up, extract, validate | answered by itself when a `registration` issue is opened; `@chekhovbot include check` looks again after an edit. It normalises the row, checks the handle against the author, the ORCID, the email behind `see ORCID page`, the ECR columns, and whether the person is listed or in a team already - warning, not refusing, for the institutional team or another list. It also checks that the contact reads as an address or a link, and warns, never refusing, of a name the ORCID record does not share, `ecr_until` and `ecr_checked` that disagree, fields written with capitals, and a contact with two addresses or only a social-media profile. Its first answer asks once for the optional survey questions left unanswered. `chekhov include check` runs the same checks from the command line, on an issue URL, a CSV file or a line |
 | 4 information missing | its answer says what is missing and how to fix it |
 | 5 personal reply | still the handling editor's: a separate comment, the bot posts fixed text only |
 | 6 team | `@chekhovbot include` (editors) puts a member in the `codecheckers` team; somebody outside the organisation is asked of the owners, and the bot checks the invitation - sent, pending, accepted - every night |
