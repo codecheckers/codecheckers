@@ -33,7 +33,7 @@ Note that the eight-year window is a guideline, not a rule: career breaks such a
 
 ## Fediverse accounts
 
-All three lists have an optional `fediverse` column with the person's Mastodon or other fediverse account, written `@user@instance`, e.g. `@christina@fediscience.org`.
+All three lists have an optional `fediverse` column with the person's Mastodon or other fediverse account, written `@user@instance`, e.g. `@codecheck@fediscience.org`, the CODECHECK account.
 When a CODECHECK certificate is announced on the fediverse, the people who worked on it are mentioned by this account (see [codecheckers/register#217](https://github.com/codecheckers/register/issues/217)).
 The column is empty unless the person told us their account; to add or change yours, open an issue or a pull request.
 
